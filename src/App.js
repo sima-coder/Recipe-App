@@ -1,24 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Home from './components/Home';
+import Recipes from './components/Recipes';
+import Recipe from './components/Recipe';
+import Header from './components/Header';
+import RecipesBrowse from './components/RecipesBrowse';
+import { Route, Switch } from 'react-router-dom';
+import './css/App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header>
+          <Route
+            path="*"
+            render={props => <Header {...props} />}
+          />
+      </header> 
+      
+      <Switch>
+        <Route
+          exact
+          path="/recipes"
+          component={Recipes}
+        />
+        <Route
+          exact
+          path="/recipes/:name"
+          component={RecipesBrowse}
+        />
+        <Route
+          path="/recipe"
+          component={Recipe}
+        />
+        <Route
+          exact
+          path="/"
+          component={Home}
+        />
+      </Switch>
     </div>
   );
 }

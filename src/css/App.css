@@ -1,0 +1,230 @@
+*:hover{
+    -webkit-transition: all .1s ease 0s;
+    -o-transition: all .1s ease 0s;
+    transition: all .1s ease 0s;
+}
+
+.App {
+    text-align: center;
+    height: 100vh;  
+    font-family: "Bree Serif", Arial, sans-serif;
+}
+
+h2{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3em;
+    margin: 40px 0 80px;
+}
+
+h2:after {
+	content: "";
+	display: block;
+	border-top: 1px solid rgba(176,144,103,0.3);
+    margin-top: -20px;
+}
+
+h2 span {
+	background-color: white;
+	padding: 10px;
+}
+
+/* FormSearch */
+.Mega-menu{
+   width: 660px;
+   margin-top: 76px;
+}
+
+.Menu-header{
+    padding: 10px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.3em;
+} 
+
+.Menu .dropdownItemCategory{
+    padding-left: 55px;
+} 
+
+.Menu .dropdownItemArea{
+	padding-left: 40px;
+} 
+
+.Menu .dropdownItemCategory:hover, .Menu .dropdownItemArea:hover {
+	color: #DC3545;
+} 
+
+.Input-search{
+  border-color: rgba(0, 0, 0, 0.7);
+}
+
+.Input-search:hover{
+    border-color: #DC3545;
+}
+
+.Button-search:hover{
+    border-color: #DC3545;
+    background-color: white;
+}
+
+.Button-search:hover .Icon-search{
+    color: #DC3545;
+}
+
+/* Home */
+.DropdownItem:hover{
+    background-color: #DC3545;
+    color: white!important;
+}
+
+.Category-card:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+
+.Recipe-day{
+    position: relative;
+}
+
+.Recipe-day-image{
+    width: 800px;  
+    height: 500px;
+}
+
+.Recipe-day-image img{
+    width: 100%;
+    max-height: 100%;
+}
+
+.Recipe-day-text{
+    background-color:rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    left: 170px;
+    bottom: 0px;
+    width: 800px;  
+    height: 500px;
+}
+
+/*Recipes*/
+.Recipe-card:hover{
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+        transform: translateY(-10px);
+}
+
+.Recipe-card-body{
+    margin-top: -130px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Recipe */
+.container-fluid{
+    background: url(../images/bg.jpg) no-repeat center; 
+    margin-top: -15px;
+}
+.Recipe{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.Recipe-title{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3em;
+    color: lightyellow;
+    padding: 20px 0;
+}
+
+.Recipe-media{
+    padding-top: 50px;
+}
+
+.Recipe-ingredients{
+    padding:25px;
+    color: white;
+    margin-left: 20px;
+}
+
+.Recipe-instructions{
+    margin-left: 20px;
+    padding:25px;
+    width: 300px;
+    color: white;
+}
+
+.Recipe-ingredients h3, .Recipe-instructions h3{
+    font-family: 'Kaushan Script', cursive;
+}
+
+/*Alert*/
+.Alert{
+    background-color: #DC3545;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+@media screen and (max-width: 1024px) {
+    /* Home */
+    .Recipe-day-image{
+        width: 600px;  
+        height: 400px;
+        margin: auto;
+    }
+      
+    .Recipe-day-text{
+        left: 60px;
+        width: 600px;  
+        height: 400px;
+    }
+
+    /* FormSearch */
+    .Mega-menu{
+        width: 405px;
+        margin-top: 163px;
+    }
+
+    .Menu .dropdownItemCategory{
+        text-align: center;
+        padding-left: 0;
+    }
+
+    /* Recipe */
+    .Recipe-media img{
+        width: 100%;
+    }
+
+    .Recipe-instructions{
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* Home */
+    .Recipe-day-image{
+        width: 420px;  
+        height: 300px;
+    }
+    
+    .Recipe-day-image img{
+        margin-left: -10px;
+    }
+    
+    .Recipe-day-text{
+        left: 10px;
+        width: 420px;  
+        height: 300px;
+    }
+
+    /* FormSearch */
+    .Mega-menu{
+        width: 265px;
+    }
+
+    .Menu .dropdownItemArea{
+        text-align: center;
+    }
+
+    /* Recipe */
+    .Recipe-instructions{
+        width: 100%;
+    }
+}
